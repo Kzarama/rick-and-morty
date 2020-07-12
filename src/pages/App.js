@@ -2,12 +2,15 @@ import React from "react";
 import logo from "../img/logo.png";
 import "./styles/App.css";
 import Characters from "../components/Characters";
+import CharacterDetails from "../components/CharacterDetails";
 
 class App extends React.Component {
   state = {
     nextPage: 1,
     loading: true,
     error: null,
+    detailIsOpen: false,
+    characterSelected: null,
     data: {
       results: [],
     },
@@ -42,6 +45,14 @@ class App extends React.Component {
     }
   };
 
+  handleCloseDetail = (e) => {
+    this.setState({ detailIsOpen: false });
+  };
+
+  handleOpenDetail = (e, character) => {
+    this.setState({ detailIsOpen: true, characterSelected: character });
+  };
+
   render() {
     if (this.state.error) {
       return `Error: ${this.state.error.message}`;
@@ -57,10 +68,20 @@ class App extends React.Component {
           <ul className="row">
             {this.state.data.results.map((character) => (
               <li className="col-6 col-md-3" key={character.id}>
-                <Characters character={character} />
+                <Characters
+                  onOpen={this.handleOpenDetail}
+                  character={character}
+                />
               </li>
             ))}
           </ul>
+
+          <CharacterDetails
+            onClose={this.handleCloseDetail}
+            onOpen={this.handleOpenDetail}
+            isOpen={this.state.detailIsOpen}
+            character={this.state.characterSelected}
+          />
 
           <div className="div_button">
             {this.state.loading && <div>loading</div>}

@@ -6,6 +6,7 @@ function Characters(props) {
     <div
       className="character"
       style={{ backgroundImage: `url(${props.character.image})` }}
+      onClick={(e) => props.onOpen(e, props.character)}
     >
       <div className="name_container">
         <span>{props.character.name}</span>
