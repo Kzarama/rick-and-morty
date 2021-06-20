@@ -1,5 +1,7 @@
 * {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 2vw;
+  margin: 0;
 }
 
 .Detail {
@@ -7,9 +9,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-
   background-color: rgba(0, 0, 0, 0.6);
-
   position: fixed;
   align-items: center;
   display: flex;
@@ -18,11 +18,12 @@
 
 .Detail_container {
   box-shadow: 0px 0px 50px 20px rgb(96, 211, 81);
-  position: relative;
+  position: absolute;
   top: 10%;
-  background-color: rgb(87, 169, 199);
+  background-color: rgb(79, 172, 206);
   padding: 0;
-  width: 70%;
+  width: 80%;
+  border-radius: 10px;
 
   text-align: center;
 }
@@ -33,19 +34,30 @@
   width: 50%;
 }
 
-.Detail_close-button {
-  font-size: 20px;
-  width: 80px;
+.Detail_close_button {
+  font-size: 2vw;
+  width: 12%;
   position: absolute;
   top: 0;
   right: 0;
   border: 0;
-  background-color: rgb(96, 211, 81);
+  border-radius: 10px;
+  background: rgb(96, 211, 81);
+}
+
+.Detail_close_button:hover {
+  background: rgb(45, 134, 34);
+  color: white;
+}
+
+.detail_properties {
+  margin-top: 6%;
 }
 
 .dot-alive {
-  height: 20px;
-  width: 20px;
+  margin-top: 1%;
+  width: 2vw;
+  height: 2vw;
   background-color: rgb(0, 255, 0);
   border-radius: 50%;
   display: inline-block;
@@ -53,8 +65,9 @@
 }
 
 .dot-unknown {
-  height: 20px;
-  width: 20px;
+  margin-top: 1%;
+  width: 2vw;
+  height: 2vw;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   display: inline-block;
@@ -62,8 +75,9 @@
 }
 
 .dot-dead {
-  height: 20px;
-  width: 20px;
+  margin-top: 1%;
+  width: 2vw;
+  height: 2vw;
   background-color: rgb(0, 0, 0);
   border-radius: 50%;
   display: inline-block;

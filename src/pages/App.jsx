@@ -1,8 +1,8 @@
-import React from "react";
-import logo from "../img/logo.png";
-import "./styles/App.css";
-import Characters from "../components/Characters";
-import CharacterDetails from "../components/CharacterDetails";
+import React from 'react';
+import logo from '../img/logo.png';
+import './styles/App.css';
+import Characters from '../components/Characters';
+import CharacterDetails from '../components/CharacterDetails';
 
 class App extends React.Component {
   state = {
@@ -65,9 +65,9 @@ class App extends React.Component {
         </header>
 
         <div className="container">
-          <ul className="row">
+          <ul>
             {this.state.data.results.map((character) => (
-              <li className="col-6 col-md-3" key={character.id}>
+              <li key={character.id}>
                 <Characters
                   onOpen={this.handleOpenDetail}
                   character={character}
@@ -84,7 +84,18 @@ class App extends React.Component {
           />
 
           <div className="div_button">
-            {this.state.loading && <div>loading</div>}
+            {this.state.loading && (
+              <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            )}
             {!this.state.loading && (
               <button
                 className="load_more_button"

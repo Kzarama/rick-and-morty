@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import "./styles/characterDetails.css";
+import './styles/characterDetails.css';
 
 function CharacterDetails(props) {
   if (!props.isOpen) {
@@ -17,14 +17,18 @@ function CharacterDetails(props) {
           alt={props.character.name}
         />
 
-        <div className="detail_properties">
-          <h1>{props.character.name}</h1>
+        <button onClick={props.onClose} className="Detail_close_button">
+          CLOSE
+        </button>
 
-          {props.character.status === "Alive" ? (
+        <div className="detail_properties">
+          <h1>Name: {props.character.name}</h1>
+
+          {props.character.status === 'Alive' ? (
             <h2>
               Status: <span class="dot-alive"></span> Alive
             </h2>
-          ) : props.character.status === "Dead" ? (
+          ) : props.character.status === 'Dead' ? (
             <h2>
               Status: <span class="dot-dead"></span> Dead
             </h2>
@@ -36,7 +40,7 @@ function CharacterDetails(props) {
 
           <h2>
             Specie: {props.character.species}
-            {props.character.type !== "" ? " - " + props.character.type : ""}
+            {props.character.type !== '' ? ' - ' + props.character.type : ''}
           </h2>
 
           <h2>Gender: {props.character.gender}</h2>
@@ -44,14 +48,10 @@ function CharacterDetails(props) {
           <h2>Origin: {props.character.origin.name}</h2>
 
           <h2>Last known location: {props.character.location.name}</h2>
-
-          <button onClick={props.onClose} className="Detail_close-button">
-            CLOSE
-          </button>
         </div>
       </div>
     </div>,
-    document.getElementById("details")
+    document.getElementById('details')
   );
 }
 
