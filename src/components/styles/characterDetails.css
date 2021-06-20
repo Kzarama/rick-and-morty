@@ -21,7 +21,6 @@
   position: absolute;
   top: 10%;
   background-color: rgb(79, 172, 206);
-  padding: 0;
   width: 80%;
   border-radius: 10px;
 
@@ -51,7 +50,7 @@
 }
 
 .detail_properties {
-  margin-top: 6%;
+  margin-top: 5%;
 }
 
 .dot-alive {
