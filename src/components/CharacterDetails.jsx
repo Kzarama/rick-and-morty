@@ -22,32 +22,48 @@ function CharacterDetails(props) {
         </button>
 
         <div className="detail_properties">
-          <h1>Name: {props.character.name}</h1>
+          <h2>
+            <span className="secondary_text">Name: </span>
+            {props.character.name}
+          </h2>
 
           {props.character.status === 'Alive' ? (
             <h2>
-              Status: <span class="dot-alive"></span> Alive
+              <span className="secondary_text">Status: </span>
+              <span class="dot-alive"></span> Alive
             </h2>
           ) : props.character.status === 'Dead' ? (
             <h2>
-              Status: <span class="dot-dead"></span> Dead
+              <span className="secondary_text">Status: </span>
+              <span class="dot-dead"></span> Dead
             </h2>
           ) : (
             <h2>
-              Status: <span class="dot-unknown"></span> Unknown
+              <span className="secondary_text">Status: </span>
+              <span class="dot-unknown"></span> Unknown
             </h2>
           )}
 
           <h2>
-            Specie: {props.character.species}
+            <span className="secondary_text">Specie: </span>
+            {props.character.species}
             {props.character.type !== '' ? ' - ' + props.character.type : ''}
           </h2>
 
-          <h2>Gender: {props.character.gender}</h2>
+          <h2>
+            <span className="secondary_text">Gender: </span>
+            {props.character.gender}
+          </h2>
 
-          <h2>Origin: {props.character.origin.name}</h2>
+          <h2>
+            <span className="secondary_text">Origin: </span>
+            {props.character.origin.name}
+          </h2>
 
-          <h2>Last known location: {props.character.location.name}</h2>
+          <h2>
+            <span className="secondary_text">Last known location: </span>
+            {props.character.location.name}
+          </h2>
         </div>
       </div>
     </div>,

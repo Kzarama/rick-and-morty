@@ -1,6 +1,6 @@
 * {
   font-family: 'Gloria Hallelujah', cursive;
-  font-size: 2vw;
+  font-size: 1.8vw;
   margin: 0;
 }
 
@@ -20,7 +20,7 @@
   box-shadow: 0px 0px 50px 20px rgb(96, 211, 81);
   position: absolute;
   top: 10%;
-  background-color: rgb(79, 172, 206);
+  background-color: rgb(60, 164, 202);
   width: 80%;
   border-radius: 10px;
 
@@ -50,7 +50,17 @@
 }
 
 .detail_properties {
-  margin-top: 5%;
+  margin: 0;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.secondary_text {
+  font-size: 1.8vw;
+  color: rgb(65, 65, 65);
 }
 
 .dot-alive {
