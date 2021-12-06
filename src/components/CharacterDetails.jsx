@@ -30,17 +30,17 @@ function CharacterDetails(props) {
           {props.character.status === 'Alive' ? (
             <h2>
               <span className="secondary_text">Status: </span>
-              <span class="dot-alive"></span> Alive
+              <span className="dot-alive"></span> Alive
             </h2>
           ) : props.character.status === 'Dead' ? (
             <h2>
               <span className="secondary_text">Status: </span>
-              <span class="dot-dead"></span> Dead
+              <span className="dot-dead"></span> Dead
             </h2>
           ) : (
             <h2>
               <span className="secondary_text">Status: </span>
-              <span class="dot-unknown"></span> Unknown
+              <span className="dot-unknown"></span> Unknown
             </h2>
           )}
 
